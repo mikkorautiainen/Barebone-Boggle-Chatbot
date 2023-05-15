@@ -32,6 +32,8 @@ This minimal local chatbot solution  can serve as a foundation for more complex 
 
 ## Getting Started
 
+**Software Requirements:** This software requires Python 3.8 or newer, as the minimum version of the transformers library we have implemented (version 4.25.0) is not compatible with earlier Python versions.
+
 To get a local copy up and running, follow these simple steps:
 1. Clone the repo
 ```bash
@@ -39,7 +41,7 @@ git clone https://github.com/mikkorautiainen/Barebone-Boogie-Chatbot.git
 ```
 2. Install the required packages
 ```bash
-pip install -r requirements.txt
+pip3 install -r requirements.txt
 ```
 
 ## Usage
@@ -66,9 +68,9 @@ The chatbot is highly customizable. You can adjust parameters like temperature, 
 
 ### Example Usage
 
-For instance, to run the chatbot with a temperature of 0.7, top_k of 500, and a maximum response length of 50, the command would be:
+For instance, to run the chatbot using the TurkuNLP/gpt3-finnish-xl model with a temperature of 0.7, top_k of 500, and a maximum response length of 50, the command would be:
 ```bash
-python3 barebone_chatbot.py --temperature 0.7 --top_k 500 --max_length 50
+python3 barebone_chatbot.py --model_name TurkuNLP/gpt3-finnish-xl --temperature 0.7 --top_k 500 --max_length 50
 ```
 
 To exit the chatbot, enter 'lopeta' as your input.
